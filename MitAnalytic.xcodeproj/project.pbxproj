@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC2F140C1E2621CE005FBEB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F140B1E2621CE005FBEB6 /* main.m */; };
+		FC2F140F1E2621CE005FBEB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F140E1E2621CE005FBEB6 /* AppDelegate.m */; };
+		FC2F14121E2621CE005FBEB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14111E2621CE005FBEB6 /* ViewController.m */; };
+		FC2F14151E2621CE005FBEB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2F14131E2621CE005FBEB6 /* Main.storyboard */; };
+		FC2F14171E2621CE005FBEB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2F14161E2621CE005FBEB6 /* Assets.xcassets */; };
+		FC2F141A1E2621CE005FBEB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2F14181E2621CE005FBEB6 /* LaunchScreen.storyboard */; };
+		FC2F14241E26222E005FBEB6 /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14231E26222E005FBEB6 /* ViewControllerTwo.m */; };
+		FC2F14271E2622A5005FBEB6 /* MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14261E2622A5005FBEB6 /* MitAnalyse.m */; };
+		FC2F142B1E262440005FBEB6 /* UIViewController+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */; };
+		FC2F142E1E262CF5005FBEB6 /* NSObject+methodSwissing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */; };
+		FC2F14311E265D93005FBEB6 /* UIControl+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */; };
+		FC2F14331E266536005FBEB6 /* MitAnalyseFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FC2F14321E266536005FBEB6 /* MitAnalyseFile.json */; };
+		FCB9AF281E274344009E4706 /* DemoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF271E274344009E4706 /* DemoButton.m */; };
+		FCB9AF2B1E27483A009E4706 /* MitStat.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2A1E27483A009E4706 /* MitStat.m */; };
+		FCB9AF2E1E275B4D009E4706 /* UITableView+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC2F14071E2621CE005FBEB6 /* MitAnalytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MitAnalytic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2F140B1E2621CE005FBEB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC2F140D1E2621CE005FBEB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC2F140E1E2621CE005FBEB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC2F14101E2621CE005FBEB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		FC2F14111E2621CE005FBEB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		FC2F14141E2621CE005FBEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC2F14161E2621CE005FBEB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC2F14191E2621CE005FBEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC2F141B1E2621CE005FBEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2F14211E2621E3005FBEB6 /* MitAnalytic.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MitAnalytic.pch; sourceTree = "<group>"; };
+		FC2F14221E26222E005FBEB6 /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerTwo.h; path = ../ViewControllerTwo.h; sourceTree = "<group>"; };
+		FC2F14231E26222E005FBEB6 /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerTwo.m; path = ../ViewControllerTwo.m; sourceTree = "<group>"; };
+		FC2F14251E2622A5005FBEB6 /* MitAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MitAnalyse.h; path = MitAnalytic/MitAnalyse.h; sourceTree = SOURCE_ROOT; };
+		FC2F14261E2622A5005FBEB6 /* MitAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MitAnalyse.m; path = MitAnalytic/MitAnalyse.m; sourceTree = SOURCE_ROOT; };
+		FC2F14291E262440005FBEB6 /* UIViewController+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+analyse.h"; path = "../UIViewController+analyse.h"; sourceTree = "<group>"; };
+		FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+analyse.m"; path = "../UIViewController+analyse.m"; sourceTree = "<group>"; };
+		FC2F142C1E262CF5005FBEB6 /* NSObject+methodSwissing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+methodSwissing.h"; path = "../NSObject+methodSwissing.h"; sourceTree = "<group>"; };
+		FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+methodSwissing.m"; path = "../NSObject+methodSwissing.m"; sourceTree = "<group>"; };
+		FC2F142F1E265D93005FBEB6 /* UIControl+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+analyse.h"; path = "../UIControl+analyse.h"; sourceTree = "<group>"; };
+		FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+analyse.m"; path = "../UIControl+analyse.m"; sourceTree = "<group>"; };
+		FC2F14321E266536005FBEB6 /* MitAnalyseFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MitAnalyseFile.json; path = MitAnalytic/MitAnalyseFile.json; sourceTree = SOURCE_ROOT; };
+		FCB9AF261E274344009E4706 /* DemoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoButton.h; path = ../DemoButton.h; sourceTree = "<group>"; };
+		FCB9AF271E274344009E4706 /* DemoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoButton.m; path = ../DemoButton.m; sourceTree = "<group>"; };
+		FCB9AF291E27483A009E4706 /* MitStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MitStat.h; path = ../MitStat.h; sourceTree = "<group>"; };
+		FCB9AF2A1E27483A009E4706 /* MitStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MitStat.m; path = ../MitStat.m; sourceTree = "<group>"; };
+		FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+analyse.h"; path = "../UITableView+analyse.h"; sourceTree = "<group>"; };
+		FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+analyse.m"; path = "../UITableView+analyse.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC2F14041E2621CE005FBEB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC2F13FE1E2621CE005FBEB6 = {
+			isa = PBXGroup;
+			children = (
+				FC2F14091E2621CE005FBEB6 /* MitAnalytic */,
+				FC2F14081E2621CE005FBEB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC2F14081E2621CE005FBEB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC2F14071E2621CE005FBEB6 /* MitAnalytic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC2F14091E2621CE005FBEB6 /* MitAnalytic */ = {
+			isa = PBXGroup;
+			children = (
+				FCB9AF311E275EAD009E4706 /* Resources */,
+				FCB9AF301E275E54009E4706 /* MitStat */,
+				FCB9AF2F1E275E1C009E4706 /* UI */,
+				FC2F14131E2621CE005FBEB6 /* Main.storyboard */,
+				FC2F14161E2621CE005FBEB6 /* Assets.xcassets */,
+				FC2F14181E2621CE005FBEB6 /* LaunchScreen.storyboard */,
+				FC2F141B1E2621CE005FBEB6 /* Info.plist */,
+				FC2F140D1E2621CE005FBEB6 /* AppDelegate.h */,
+				FC2F140E1E2621CE005FBEB6 /* AppDelegate.m */,
+				FC2F14211E2621E3005FBEB6 /* MitAnalytic.pch */,
+				FC2F140A1E2621CE005FBEB6 /* Supporting Files */,
+			);
+			path = MitAnalytic;
+			sourceTree = "<group>";
+		};
+		FC2F140A1E2621CE005FBEB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2F140B1E2621CE005FBEB6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCB9AF2F1E275E1C009E4706 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FCB9AF261E274344009E4706 /* DemoButton.h */,
+				FCB9AF271E274344009E4706 /* DemoButton.m */,
+				FC2F14101E2621CE005FBEB6 /* ViewController.h */,
+				FC2F14111E2621CE005FBEB6 /* ViewController.m */,
+				FC2F14221E26222E005FBEB6 /* ViewControllerTwo.h */,
+				FC2F14231E26222E005FBEB6 /* ViewControllerTwo.m */,
+			);
+			name = UI;
+			path = ViewConrtoller;
+			sourceTree = "<group>";
+		};
+		FCB9AF301E275E54009E4706 /* MitStat */ = {
+			isa = PBXGroup;
+			children = (
+				FCB9AF291E27483A009E4706 /* MitStat.h */,
+				FCB9AF2A1E27483A009E4706 /* MitStat.m */,
+				FC2F14251E2622A5005FBEB6 /* MitAnalyse.h */,
+				FC2F14261E2622A5005FBEB6 /* MitAnalyse.m */,
+				FC2F142C1E262CF5005FBEB6 /* NSObject+methodSwissing.h */,
+				FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */,
+				FC2F14291E262440005FBEB6 /* UIViewController+analyse.h */,
+				FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */,
+				FC2F142F1E265D93005FBEB6 /* UIControl+analyse.h */,
+				FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */,
+				FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */,
+				FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */,
+			);
+			name = MitStat;
+			path = MitAnalyse;
+			sourceTree = "<group>";
+		};
+		FCB9AF311E275EAD009E4706 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC2F14321E266536005FBEB6 /* MitAnalyseFile.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC2F14061E2621CE005FBEB6 /* MitAnalytic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2F141E1E2621CE005FBEB6 /* Build configuration list for PBXNativeTarget "MitAnalytic" */;
+			buildPhases = (
+				FC2F14031E2621CE005FBEB6 /* Sources */,
+				FC2F14041E2621CE005FBEB6 /* Frameworks */,
+				FC2F14051E2621CE005FBEB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MitAnalytic;
+			productName = MitAnalytic;
+			productReference = FC2F14071E2621CE005FBEB6 /* MitAnalytic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC2F13FF1E2621CE005FBEB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = MENGCHEN;
+				TargetAttributes = {
+					FC2F14061E2621CE005FBEB6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T43EX2XKU3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FC2F14021E2621CE005FBEB6 /* Build configuration list for PBXProject "MitAnalytic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC2F13FE1E2621CE005FBEB6;
+			productRefGroup = FC2F14081E2621CE005FBEB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC2F14061E2621CE005FBEB6 /* MitAnalytic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC2F14051E2621CE005FBEB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2F141A1E2621CE005FBEB6 /* LaunchScreen.storyboard in Resources */,
+				FC2F14331E266536005FBEB6 /* MitAnalyseFile.json in Resources */,
+				FC2F14171E2621CE005FBEB6 /* Assets.xcassets in Resources */,
+				FC2F14151E2621CE005FBEB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC2F14031E2621CE005FBEB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2F14121E2621CE005FBEB6 /* ViewController.m in Sources */,
+				FC2F14271E2622A5005FBEB6 /* MitAnalyse.m in Sources */,
+				FCB9AF281E274344009E4706 /* DemoButton.m in Sources */,
+				FC2F140F1E2621CE005FBEB6 /* AppDelegate.m in Sources */,
+				FCB9AF2B1E27483A009E4706 /* MitStat.m in Sources */,
+				FCB9AF2E1E275B4D009E4706 /* UITableView+analyse.m in Sources */,
+				FC2F140C1E2621CE005FBEB6 /* main.m in Sources */,
+				FC2F142B1E262440005FBEB6 /* UIViewController+analyse.m in Sources */,
+				FC2F14311E265D93005FBEB6 /* UIControl+analyse.m in Sources */,
+				FC2F142E1E262CF5005FBEB6 /* NSObject+methodSwissing.m in Sources */,
+				FC2F14241E26222E005FBEB6 /* ViewControllerTwo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC2F14131E2621CE005FBEB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2F14141E2621CE005FBEB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC2F14181E2621CE005FBEB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2F14191E2621CE005FBEB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC2F141C1E2621CE005FBEB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC2F141D1E2621CE005FBEB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC2F141F1E2621CE005FBEB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T43EX2XKU3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MitAnalytic/MitAnalytic.pch";
+				INFOPLIST_FILE = MitAnalytic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mcking.MitAnalytic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC2F14201E2621CE005FBEB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T43EX2XKU3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MitAnalytic/MitAnalytic.pch";
+				INFOPLIST_FILE = MitAnalytic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mcking.MitAnalytic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC2F14021E2621CE005FBEB6 /* Build configuration list for PBXProject "MitAnalytic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2F141C1E2621CE005FBEB6 /* Debug */,
+				FC2F141D1E2621CE005FBEB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2F141E1E2621CE005FBEB6 /* Build configuration list for PBXNativeTarget "MitAnalytic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2F141F1E2621CE005FBEB6 /* Debug */,
+				FC2F14201E2621CE005FBEB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC2F13FF1E2621CE005FBEB6 /* Project object */;
+}

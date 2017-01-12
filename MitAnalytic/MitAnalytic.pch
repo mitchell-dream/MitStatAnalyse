@@ -1,0 +1,15 @@
+//
+//  MitAnalytic.pch
+//  MitAnalytic
+//
+//  Created by MENGCHEN on 2017/1/11.
+//  Copyright © 2017年 MENGCHEN. All rights reserved.
+//
+
+#ifndef MitAnalytic_pch
+#define MitAnalytic_pch
+
+
+//#import "MitAnalyse.h"
+//#import "NSObject+methodSwissing.h"
+#endif /* MitAnalytic_pch */
