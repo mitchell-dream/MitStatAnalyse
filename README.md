@@ -4,7 +4,13 @@
 + 获取文件中打点内容，并进行缓存。
 + 根据 method swizzing 进行方法替换，实现通用打点逻辑，这里实现的是将 class 和 method 一些参数传入解析类(MitAnalyse)中和文件内容进行匹配。
 + 打点类(MitStat）将结果写入统计文件中，之后上传后台统计服务器。
+
+---
 ### 好处
-+ 这种方式的好处是，无侵入性，具体表现在使用 category-load-method swizzing ，做到无侵染的实现各个地方的统计调用。
++ 这种方式的好处是无侵入性，具体表现在使用 category-load-method swizzing ，做到无须引用即可在各个地方实现统计。
+
+---
+
+
 
 
