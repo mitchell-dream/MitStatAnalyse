@@ -12,10 +12,7 @@
 #import "MitAnalyse.h"
 @implementation UITableView (analyse)
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [NSObject swizzleMethod:self origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
-    });
+    [NSObject swizzleMethod:self origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
 }
 
 

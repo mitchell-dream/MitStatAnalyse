@@ -13,11 +13,8 @@
 @implementation UIViewController (analyse)
 
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [NSObject swizzleMethod:[self class] origin:@selector(viewWillAppear:) new:@selector(analyse_viewWillAppear:)];
-        [NSObject swizzleMethod:[self class] origin:@selector(viewWillDisappear:) new:@selector(analyse_viewWillDisappear:)];
-    });
+    [NSObject swizzleMethod:[self class] origin:@selector(viewWillAppear:) new:@selector(analyse_viewWillAppear:)];
+    [NSObject swizzleMethod:[self class] origin:@selector(viewWillDisappear:) new:@selector(analyse_viewWillDisappear:)];
 }
 - (void)analyse_viewWillAppear:(BOOL)animated{
     [self analyse_viewWillAppear:animated];

@@ -12,10 +12,7 @@
 #import "MitAnalyse.h"
 @implementation UIControl (analyse)
 +(void)load{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [NSObject swizzleMethod:[self class] origin:@selector(sendAction:to:forEvent:) new:@selector(analyse_sendAction:to:forEvent:)];
-    });
+    [NSObject swizzleMethod:[self class] origin:@selector(sendAction:to:forEvent:) new:@selector(analyse_sendAction:to:forEvent:)];
 }
 - (void)analyse_sendAction:(SEL)action to:(nullable id)target forEvent:(nullable UIEvent *)event{
     [self analyse_sendAction:action to:target forEvent:event];
