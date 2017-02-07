@@ -45,7 +45,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     if (!_analyseCache) {
         NSCache * ca = [[NSCache alloc]init];
         ca.delegate = self;
-        ca.countLimit = 1000;
+        ca.countLimit = 100;
         _analyseCache = ca;
     }
     return _analyseCache;
@@ -54,6 +54,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
 -(NSOperationQueue *)queue{
     if (!_queue) {
         NSOperationQueue * que = [[NSOperationQueue alloc]init];
+        que.maxConcurrentOperationCount = 1;
         _queue = que;
     }
     return _queue;
@@ -72,15 +73,26 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     NSString * clsName = NSStringFromClass(cls);
     NSString * targetName = NSStringFromClass([targes class]);
     NSString * methodName = NSStringFromSelector(selector);
-    NSLog(@"class = %@ target = %@ sel = %@",clsName,targetName,methodName);
+    NSLog(@"解析事件：class = %@ target = %@ sel = %@",clsName,targetName,methodName);
     NSString * key = [NSString stringWithFormat:@"%@_%@_%@",clsName,targetName,methodName];
     NSDictionary * dict = [MitAnalyse readDataFromKey:key];
+    if (message&&dict) {
+        NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithDictionary:dict];
+        [dic setValue:message forKey:@"others"];
+        dict = [dic copy];
+    }
     if (dict) {
         //缓存中有值，打对应的点
-        [MitStat statWithAnalyseDict:dict];
+        
+        [MitStat statWithAnalyseData:dict];
     } else {
+        NSDictionary * dic = @{@"class":clsName,@"target":targetName,@"sel":methodName};
+        NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dic];
+        if (message) {
+            [dict setValue:message forKey:@"others"];
+        }
         //缓存中无值，证明文件中没有这个事件，属于意外打点。
-        [MitStat statWithOtherString:key];
+        [MitStat statWithOtherData:dict];
     }
 }
 
@@ -89,7 +101,9 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
 - (void)writeData:(NSDictionary *)dict forKey:(NSString *)key{
     NSString * filePath = [MitAnalyse filePathForKey:key];
     //内存缓存
-    [MitAnalyseManager.analyseCache setObject:dict forKey:key];
+    if (![MitAnalyseManager.analyseCache objectForKey:key]) {
+        [MitAnalyseManager.analyseCache setObject:dict forKey:key];
+    }
     //磁盘缓存
     NSError * error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
@@ -97,7 +111,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
         NSLog(@"%@",error.description);
         return;
     }
-    NSLog(@"dict = %@ key = %@",dict,key);
+//    NSLog(@"dict = %@ key = %@",dict,key);
     if (![[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
         dispatch_async([MitAnalyseManager getFileQueue], ^{
             [[NSFileManager defaultManager]createFileAtPath:filePath contents:data attributes:nil];
@@ -109,7 +123,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
 -(dispatch_queue_t) getFileQueue{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _fileQueue = dispatch_queue_create(0, DISPATCH_QUEUE_SERIAL);
+        _fileQueue = dispatch_queue_create(0, DISPATCH_QUEUE_CONCURRENT);
     });
     return _fileQueue;
 }
@@ -129,15 +143,18 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     if (!key) {
         return nil;
     }
+    //因为这里涉及到了内存的问题，如果统计需求过多，都存到内存中，会增大内存的压力，这时可以采用磁盘写入，但是磁盘的 I/O 操作
     __block NSDictionary * dict = nil;
     //读内存
     dict = [MitAnalyseManager.analyseCache objectForKey:key];
     if (dict) {
+        NSLog(@"从内存中读取");
         return dict;
     }
     //读磁盘
     NSString * filePath = [MitAnalyse filePathForKey:key];
     if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
+        NSLog(@"从磁盘中读取");
         NSData * fileData = [[NSFileManager defaultManager]contentsAtPath:filePath];
         NSError* errr = nil;
         dict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&errr];
@@ -172,7 +189,6 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
                 NSArray * arr = (NSArray*)[jsonObject objectForKey:@"data"];
                 MitAnalyseManager.classData = [NSMutableArray arrayWithArray:arr];
         }];
-        handleOp.name = @"handleJsonData";
         [MitAnalyseManager.queue addOperation:handleOp];
         NSBlockOperation * cacheOp = [NSBlockOperation blockOperationWithBlock:^{
             @autoreleasepool {
@@ -193,7 +209,6 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
                 }
             }
         }];
-        cacheOp.name = @"cacheOp";
         [cacheOp addDependency:handleOp];
         [MitAnalyseManager.queue addOperation:cacheOp];
         

@@ -10,7 +10,7 @@
 
 #define MitAnalyseManager [MitAnalyse sharedManager]
 @interface MitAnalyse : NSObject
-+ (instancetype)sharedManager;
++ (_Nullable instancetype)sharedManager;
 + (void)startAnalyse;
 + (void)trackEventWithClass:(_Nonnull Class)klass target:(nonnull id)targes selector:(_Nonnull SEL)selector message:(NSString * _Nullable )message;
 @end

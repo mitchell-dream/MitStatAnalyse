@@ -2,6 +2,19 @@
     "version":"0.0.1",
     "data":
     [{
+     "class":"AppDelegate",
+     "methodList":[
+                   {
+                   "className":"AppDelegate",
+                   "target":"AppDelegate",
+                   "methodDetail":"点击push",
+                   "methodName":"application:didFinishLaunchingWithOptions:",
+                   "eventType":"1",
+                   "eventId":"10"
+                   }
+                   ]
+     },
+     {
      "class":"ViewController",
      "methodList":[
                 {
@@ -9,6 +22,7 @@
                    "target":"ViewController",
                    "methodDetail":"点击push",
                    "methodName":"push:",
+                   "eventType":"0",
                    "eventId":"1"
                 },
                 {
@@ -16,6 +30,7 @@
                    "target":"ViewController",
                    "methodDetail":"进入页面1",
                    "methodName":"viewWillAppear:",
+                   "eventType":"0",
                    "eventId":"2"
                 },
                 {
@@ -23,6 +38,7 @@
                    "target":"ViewController",
                    "methodDetail":"离开页面1",
                    "methodName":"viewWillDisAppear:",
+                   "eventType":"0",
                    "eventId":"3"
                 },
                 {
@@ -30,6 +46,7 @@
                    "target":"ViewController",
                    "methodDetail":"离开页面1",
                    "methodName":"viewWillDisAppear:",
+                   "eventType":"0",
                    "eventId":"4"
                 },
                 ]
@@ -42,6 +59,7 @@
                 "target":"ViewControllerTwo",
                 "methodDetail":"点击btnClick",
                 "methodName":"btnClick",
+                "eventType":"0",
                 "eventId":"5"
                 },
                 {
@@ -49,6 +67,7 @@
                 "target":"ViewControllerTwo",
                 "methodDetail":"页面2出现",
                 "methodName":"viewWillAppear:",
+                "eventType":"0",
                 "eventId":"6"
                 },
                 {
@@ -56,13 +75,15 @@
                 "target":"ViewControllerTwo",
                 "methodDetail":"页面2消失",
                 "methodName":"viewWillDisAppear:",
+                "eventType":"0",
                 "eventId":"7"
                 },
                 {
                 "className":"UITableView",
                 "target":"ViewControllerTwo",
-                "methodDetail":"页面2消失",
+                "methodDetail":"点击 cell",
                 "methodName":"tableView:didSelectRowAtIndexPath:",
+                "eventType":"0",
                 "eventId":"8"
                 }
                 ]

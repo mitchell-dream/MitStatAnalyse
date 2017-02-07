@@ -22,6 +22,9 @@
 		FCB9AF281E274344009E4706 /* DemoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF271E274344009E4706 /* DemoButton.m */; };
 		FCB9AF2B1E27483A009E4706 /* MitStat.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2A1E27483A009E4706 /* MitStat.m */; };
 		FCB9AF2E1E275B4D009E4706 /* UITableView+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */; };
+		FCCA4DDD1E34FA13004E5DE5 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DDC1E34FA13004E5DE5 /* NSString+Encryption.m */; };
+		FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */; };
+		FCCA4DE91E362CA7004E5DE5 /* UIResponder+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,12 @@
 		FCB9AF2A1E27483A009E4706 /* MitStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MitStat.m; path = ../MitStat.m; sourceTree = "<group>"; };
 		FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+analyse.h"; path = "../UITableView+analyse.h"; sourceTree = "<group>"; };
 		FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+analyse.m"; path = "../UITableView+analyse.m"; sourceTree = "<group>"; };
+		FCCA4DDB1E34FA13004E5DE5 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		FCCA4DDC1E34FA13004E5DE5 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+analyse.h"; sourceTree = "<group>"; };
+		FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+analyse.m"; sourceTree = "<group>"; };
+		FCCA4DE71E362CA7004E5DE5 /* UIResponder+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+analyse.h"; sourceTree = "<group>"; };
+		FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+analyse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,8 @@
 				FCB9AF2A1E27483A009E4706 /* MitStat.m */,
 				FC2F14251E2622A5005FBEB6 /* MitAnalyse.h */,
 				FC2F14261E2622A5005FBEB6 /* MitAnalyse.m */,
+				FCCA4DDB1E34FA13004E5DE5 /* NSString+Encryption.h */,
+				FCCA4DDC1E34FA13004E5DE5 /* NSString+Encryption.m */,
 				FC2F142C1E262CF5005FBEB6 /* NSObject+methodSwissing.h */,
 				FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */,
 				FC2F14291E262440005FBEB6 /* UIViewController+analyse.h */,
@@ -137,6 +148,10 @@
 				FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */,
 				FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */,
 				FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */,
+				FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+analyse.h */,
+				FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */,
+				FCCA4DE71E362CA7004E5DE5 /* UIResponder+analyse.h */,
+				FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */,
 			);
 			name = MitStat;
 			path = MitAnalyse;
@@ -223,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCA4DDD1E34FA13004E5DE5 /* NSString+Encryption.m in Sources */,
 				FC2F14121E2621CE005FBEB6 /* ViewController.m in Sources */,
 				FC2F14271E2622A5005FBEB6 /* MitAnalyse.m in Sources */,
 				FCB9AF281E274344009E4706 /* DemoButton.m in Sources */,
@@ -232,7 +248,9 @@
 				FC2F140C1E2621CE005FBEB6 /* main.m in Sources */,
 				FC2F142B1E262440005FBEB6 /* UIViewController+analyse.m in Sources */,
 				FC2F14311E265D93005FBEB6 /* UIControl+analyse.m in Sources */,
+				FCCA4DE91E362CA7004E5DE5 /* UIResponder+analyse.m in Sources */,
 				FC2F142E1E262CF5005FBEB6 /* NSObject+methodSwissing.m in Sources */,
+				FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+analyse.m in Sources */,
 				FC2F14241E26222E005FBEB6 /* ViewControllerTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

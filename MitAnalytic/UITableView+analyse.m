@@ -12,7 +12,7 @@
 #import "MitAnalyse.h"
 @implementation UITableView (analyse)
 +(void)load{
-    [NSObject swizzleMethod:self origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
+    [NSObject swizzleMethod:[self class] origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
 }
 
 
@@ -30,7 +30,7 @@
 void analyse_didSelectRowAtIndexPath(id self, SEL _cmd, id tableView, id indexpath)
 {
     NSIndexPath * index = indexpath;
-    [MitAnalyse trackEventWithClass:[tableView class] target:self selector:_cmd message:[NSString stringWithFormat:@"section = %ld row = %ld",index.section,index.row]];
+    [MitAnalyse trackEventWithClass:[tableView class] target:self selector:_cmd message:[NSString stringWithFormat:@"section=%ld,row=%ld",index.section,index.row]];
 }
 
 @end
