@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "40C11AFC635CFBF84FF3D948B7EB8B5B0C4571E0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AEC35ACC533216FDD54260E68A8A000410066971" : 9223372036854775807,
+    "40C11AFC635CFBF84FF3D948B7EB8B5B0C4571E0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4E7A662E-D9F9-4F6F-9BBC-4F00CE345D7B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AEC35ACC533216FDD54260E68A8A000410066971" : "",
+    "40C11AFC635CFBF84FF3D948B7EB8B5B0C4571E0" : "MitAnalytic\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MitAnalytic",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MitAnalytic.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mcmengchen\/MitStatAnalyse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "40C11AFC635CFBF84FF3D948B7EB8B5B0C4571E0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mcmengchen\/iOS---MIthcell-NSInvocation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AEC35ACC533216FDD54260E68A8A000410066971"
+    }
+  ]
+}

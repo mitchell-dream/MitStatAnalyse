@@ -12,11 +12,11 @@
 
 @implementation UIResponder (MitAnalyse)
 + (void)load{
-    [NSObject swizzleMethod:[self class] origin:@selector(touchesBegan:withEvent:) new:@selector(analyse_touchesBegan:withEvent:)];
+//    [NSObject swizzleMethod:[self class] origin:@selector(touchesBegan:withEvent:) new:@selector(analyse_touchesBegan:withEvent:)];
 }
 
 - (void)analyse_touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    NSLog(@"%@",[self class]);
+
     [self analyse_touchesBegan:touches withEvent:event];
     UITouch * touch = [touches anyObject];
     CGPoint point = [touch locationInView:touch.view];

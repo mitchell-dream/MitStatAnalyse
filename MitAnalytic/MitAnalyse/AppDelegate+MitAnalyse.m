@@ -20,9 +20,10 @@
     //将要失去活跃
     [NSObject swizzleMethod:[self class] origin:@selector(applicationWillResignActive:) new:@selector(analyse_applicationDidBecomeActive:)];
     //app即将进入前台
-    [NSObject swizzleMethod:[self class] origin:@selector(applicationWillEnterForeground:) new:@selector(analyse_applicationWillEnterForeground:)];    
+    [NSObject swizzleMethod:[self class] origin:@selector(applicationWillEnterForeground:) new:@selector(analyse_applicationWillEnterForeground:)];
     //app 进入后台
     [NSObject swizzleMethod:[self class] origin:@selector(applicationDidEnterBackground:) new:@selector(analyse_applicationDidEnterBackground:)];
+
 }
 
 #pragma mark action 启动

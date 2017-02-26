@@ -11,21 +11,27 @@
 #import <objc/runtime.h>
 #import "MitAnalyse.h"
 @implementation UITableView (MitAnalyse)
-+(void)load{
++ (void)load{
+    //代理
     [NSObject swizzleMethod:[self class] origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
+    
+    
+    
 }
 
 - (void)analyse_setDelegate:(id <UITableViewDelegate>)delegate{
     [self analyse_setDelegate:delegate];
     Class cls = [delegate class];
+    //添加方法
     if(class_addMethod(cls, NSSelectorFromString(@"analyse_didSelectRowAtIndexPath"), (IMP)analyse_didSelectRowAtIndexPath, "v@:@@")){
-        Method dis_originalMethod = class_getInstanceMethod(cls, NSSelectorFromString(@"analyse_didSelectRowAtIndexPath"));
-        Method dis_swizzledMethod = class_getInstanceMethod(cls, @selector(tableView:didSelectRowAtIndexPath:));
+        //原来的方法
+        Method dis_originalMethod = class_getInstanceMethod(cls,@selector(tableView:didSelectRowAtIndexPath:));
+        //现在的方法
+        Method dis_swizzledMethod = class_getInstanceMethod(cls, NSSelectorFromString(@"analyse_didSelectRowAtIndexPath"));
         //交换实现
         method_exchangeImplementations(dis_originalMethod, dis_swizzledMethod);
     }
 }
-
 void analyse_didSelectRowAtIndexPath(id self, SEL _cmd, id tableView, id indexpath)
 {
     NSIndexPath * index = indexpath;

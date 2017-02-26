@@ -20,7 +20,7 @@
     
     
     
-    [self setupAnalytic];
+//    [self setupAnalytic];
     return YES;
 }
 

@@ -12,13 +12,13 @@
 
 
 
-+(void)swizzleMethod:(Class)cls origin:(SEL)originSelector new:(SEL)newSelector{
++ (void)swizzleMethod:(Class)cls origin:(SEL)originSelector new:(SEL)newSelector{
     Method originMethod = class_getInstanceMethod(cls, originSelector);
     Method swizzleMethod = class_getInstanceMethod(cls, newSelector);
     BOOL didAddMethod = class_addMethod(cls, originSelector, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod));
     if (didAddMethod) {
         class_replaceMethod(cls, newSelector, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
-    }else{
+    } else {
         method_exchangeImplementations(originMethod, swizzleMethod);
     }
 }
