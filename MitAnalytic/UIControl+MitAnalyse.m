@@ -6,11 +6,11 @@
 //  Copyright © 2017年 MENGCHEN. All rights reserved.
 //
 
-#import "UIControl+analyse.h"
+#import "UIControl+MitAnalyse.h"
 #import <objc/runtime.h>
 #import "NSObject+methodSwissing.h"
 #import "MitAnalyse.h"
-@implementation UIControl (analyse)
+@implementation UIControl (MitAnalyse)
 +(void)load{
     [NSObject swizzleMethod:[self class] origin:@selector(sendAction:to:forEvent:) new:@selector(analyse_sendAction:to:forEvent:)];
 }

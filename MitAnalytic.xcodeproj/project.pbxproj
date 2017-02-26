@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC15B1581E62775200F2314D /* MitAnalyticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC15B1571E62775200F2314D /* MitAnalyticTests.m */; };
 		FC2F140C1E2621CE005FBEB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F140B1E2621CE005FBEB6 /* main.m */; };
 		FC2F140F1E2621CE005FBEB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F140E1E2621CE005FBEB6 /* AppDelegate.m */; };
 		FC2F14121E2621CE005FBEB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14111E2621CE005FBEB6 /* ViewController.m */; };
@@ -17,17 +18,30 @@
 		FC2F14271E2622A5005FBEB6 /* MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14261E2622A5005FBEB6 /* MitAnalyse.m */; };
 		FC2F142B1E262440005FBEB6 /* UIViewController+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */; };
 		FC2F142E1E262CF5005FBEB6 /* NSObject+methodSwissing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */; };
-		FC2F14311E265D93005FBEB6 /* UIControl+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */; };
+		FC2F14311E265D93005FBEB6 /* UIControl+MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F14301E265D93005FBEB6 /* UIControl+MitAnalyse.m */; };
 		FC2F14331E266536005FBEB6 /* MitAnalyseFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FC2F14321E266536005FBEB6 /* MitAnalyseFile.json */; };
 		FCB9AF281E274344009E4706 /* DemoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF271E274344009E4706 /* DemoButton.m */; };
 		FCB9AF2B1E27483A009E4706 /* MitStat.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2A1E27483A009E4706 /* MitStat.m */; };
-		FCB9AF2E1E275B4D009E4706 /* UITableView+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */; };
+		FCB9AF2E1E275B4D009E4706 /* UITableView+MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB9AF2D1E275B4D009E4706 /* UITableView+MitAnalyse.m */; };
 		FCCA4DDD1E34FA13004E5DE5 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DDC1E34FA13004E5DE5 /* NSString+Encryption.m */; };
-		FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */; };
-		FCCA4DE91E362CA7004E5DE5 /* UIResponder+analyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */; };
+		FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.m */; };
+		FCCA4DE91E362CA7004E5DE5 /* UIResponder+MitAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCA4DE81E362CA7004E5DE5 /* UIResponder+MitAnalyse.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FC15B15A1E62775200F2314D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2F13FF1E2621CE005FBEB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC2F14061E2621CE005FBEB6;
+			remoteInfo = MitAnalytic;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		FC15B1551E62775100F2314D /* MitAnalyticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MitAnalyticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC15B1571E62775200F2314D /* MitAnalyticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MitAnalyticTests.m; sourceTree = "<group>"; };
+		FC15B1591E62775200F2314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC2F14071E2621CE005FBEB6 /* MitAnalytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MitAnalytic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2F140B1E2621CE005FBEB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC2F140D1E2621CE005FBEB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,24 +61,31 @@
 		FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+analyse.m"; path = "../UIViewController+analyse.m"; sourceTree = "<group>"; };
 		FC2F142C1E262CF5005FBEB6 /* NSObject+methodSwissing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+methodSwissing.h"; path = "../NSObject+methodSwissing.h"; sourceTree = "<group>"; };
 		FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+methodSwissing.m"; path = "../NSObject+methodSwissing.m"; sourceTree = "<group>"; };
-		FC2F142F1E265D93005FBEB6 /* UIControl+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+analyse.h"; path = "../UIControl+analyse.h"; sourceTree = "<group>"; };
-		FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+analyse.m"; path = "../UIControl+analyse.m"; sourceTree = "<group>"; };
+		FC2F142F1E265D93005FBEB6 /* UIControl+MitAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+MitAnalyse.h"; path = "../UIControl+MitAnalyse.h"; sourceTree = "<group>"; };
+		FC2F14301E265D93005FBEB6 /* UIControl+MitAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+MitAnalyse.m"; path = "../UIControl+MitAnalyse.m"; sourceTree = "<group>"; };
 		FC2F14321E266536005FBEB6 /* MitAnalyseFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MitAnalyseFile.json; path = MitAnalytic/MitAnalyseFile.json; sourceTree = SOURCE_ROOT; };
 		FCB9AF261E274344009E4706 /* DemoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoButton.h; path = ../DemoButton.h; sourceTree = "<group>"; };
 		FCB9AF271E274344009E4706 /* DemoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoButton.m; path = ../DemoButton.m; sourceTree = "<group>"; };
 		FCB9AF291E27483A009E4706 /* MitStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MitStat.h; path = ../MitStat.h; sourceTree = "<group>"; };
 		FCB9AF2A1E27483A009E4706 /* MitStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MitStat.m; path = ../MitStat.m; sourceTree = "<group>"; };
-		FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+analyse.h"; path = "../UITableView+analyse.h"; sourceTree = "<group>"; };
-		FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+analyse.m"; path = "../UITableView+analyse.m"; sourceTree = "<group>"; };
+		FCB9AF2C1E275B4D009E4706 /* UITableView+MitAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+MitAnalyse.h"; path = "../UITableView+MitAnalyse.h"; sourceTree = "<group>"; };
+		FCB9AF2D1E275B4D009E4706 /* UITableView+MitAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+MitAnalyse.m"; path = "../UITableView+MitAnalyse.m"; sourceTree = "<group>"; };
 		FCCA4DDB1E34FA13004E5DE5 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
 		FCCA4DDC1E34FA13004E5DE5 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
-		FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+analyse.h"; sourceTree = "<group>"; };
-		FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+analyse.m"; sourceTree = "<group>"; };
-		FCCA4DE71E362CA7004E5DE5 /* UIResponder+analyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+analyse.h"; sourceTree = "<group>"; };
-		FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+analyse.m"; sourceTree = "<group>"; };
+		FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MitAnalyse.h"; sourceTree = "<group>"; };
+		FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MitAnalyse.m"; sourceTree = "<group>"; };
+		FCCA4DE71E362CA7004E5DE5 /* UIResponder+MitAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+MitAnalyse.h"; sourceTree = "<group>"; };
+		FCCA4DE81E362CA7004E5DE5 /* UIResponder+MitAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+MitAnalyse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC15B1521E62775100F2314D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC2F14041E2621CE005FBEB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,10 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC15B1561E62775200F2314D /* MitAnalyticTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC15B1571E62775200F2314D /* MitAnalyticTests.m */,
+				FC15B1591E62775200F2314D /* Info.plist */,
+			);
+			path = MitAnalyticTests;
+			sourceTree = "<group>";
+		};
 		FC2F13FE1E2621CE005FBEB6 = {
 			isa = PBXGroup;
 			children = (
 				FC2F14091E2621CE005FBEB6 /* MitAnalytic */,
+				FC15B1561E62775200F2314D /* MitAnalyticTests */,
 				FC2F14081E2621CE005FBEB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2F14071E2621CE005FBEB6 /* MitAnalytic.app */,
+				FC15B1551E62775100F2314D /* MitAnalyticTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,14 +176,14 @@
 				FC2F142D1E262CF5005FBEB6 /* NSObject+methodSwissing.m */,
 				FC2F14291E262440005FBEB6 /* UIViewController+analyse.h */,
 				FC2F142A1E262440005FBEB6 /* UIViewController+analyse.m */,
-				FC2F142F1E265D93005FBEB6 /* UIControl+analyse.h */,
-				FC2F14301E265D93005FBEB6 /* UIControl+analyse.m */,
-				FCB9AF2C1E275B4D009E4706 /* UITableView+analyse.h */,
-				FCB9AF2D1E275B4D009E4706 /* UITableView+analyse.m */,
-				FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+analyse.h */,
-				FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+analyse.m */,
-				FCCA4DE71E362CA7004E5DE5 /* UIResponder+analyse.h */,
-				FCCA4DE81E362CA7004E5DE5 /* UIResponder+analyse.m */,
+				FC2F142F1E265D93005FBEB6 /* UIControl+MitAnalyse.h */,
+				FC2F14301E265D93005FBEB6 /* UIControl+MitAnalyse.m */,
+				FCB9AF2C1E275B4D009E4706 /* UITableView+MitAnalyse.h */,
+				FCB9AF2D1E275B4D009E4706 /* UITableView+MitAnalyse.m */,
+				FCCA4DE41E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.h */,
+				FCCA4DE51E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.m */,
+				FCCA4DE71E362CA7004E5DE5 /* UIResponder+MitAnalyse.h */,
+				FCCA4DE81E362CA7004E5DE5 /* UIResponder+MitAnalyse.m */,
 			);
 			name = MitStat;
 			path = MitAnalyse;
@@ -168,6 +200,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC15B1541E62775100F2314D /* MitAnalyticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC15B15E1E62775200F2314D /* Build configuration list for PBXNativeTarget "MitAnalyticTests" */;
+			buildPhases = (
+				FC15B1511E62775100F2314D /* Sources */,
+				FC15B1521E62775100F2314D /* Frameworks */,
+				FC15B1531E62775100F2314D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC15B15B1E62775200F2314D /* PBXTargetDependency */,
+			);
+			name = MitAnalyticTests;
+			productName = MitAnalyticTests;
+			productReference = FC15B1551E62775100F2314D /* MitAnalyticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FC2F14061E2621CE005FBEB6 /* MitAnalytic */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC2F141E1E2621CE005FBEB6 /* Build configuration list for PBXNativeTarget "MitAnalytic" */;
@@ -194,6 +244,12 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = MENGCHEN;
 				TargetAttributes = {
+					FC15B1541E62775100F2314D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T43EX2XKU3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC2F14061E2621CE005FBEB6;
+					};
 					FC2F14061E2621CE005FBEB6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = T43EX2XKU3;
@@ -215,11 +271,19 @@
 			projectRoot = "";
 			targets = (
 				FC2F14061E2621CE005FBEB6 /* MitAnalytic */,
+				FC15B1541E62775100F2314D /* MitAnalyticTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC15B1531E62775100F2314D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC2F14051E2621CE005FBEB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +298,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC15B1511E62775100F2314D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC15B1581E62775200F2314D /* MitAnalyticTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC2F14031E2621CE005FBEB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,18 +316,26 @@
 				FCB9AF281E274344009E4706 /* DemoButton.m in Sources */,
 				FC2F140F1E2621CE005FBEB6 /* AppDelegate.m in Sources */,
 				FCB9AF2B1E27483A009E4706 /* MitStat.m in Sources */,
-				FCB9AF2E1E275B4D009E4706 /* UITableView+analyse.m in Sources */,
+				FCB9AF2E1E275B4D009E4706 /* UITableView+MitAnalyse.m in Sources */,
 				FC2F140C1E2621CE005FBEB6 /* main.m in Sources */,
 				FC2F142B1E262440005FBEB6 /* UIViewController+analyse.m in Sources */,
-				FC2F14311E265D93005FBEB6 /* UIControl+analyse.m in Sources */,
-				FCCA4DE91E362CA7004E5DE5 /* UIResponder+analyse.m in Sources */,
+				FC2F14311E265D93005FBEB6 /* UIControl+MitAnalyse.m in Sources */,
+				FCCA4DE91E362CA7004E5DE5 /* UIResponder+MitAnalyse.m in Sources */,
 				FC2F142E1E262CF5005FBEB6 /* NSObject+methodSwissing.m in Sources */,
-				FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+analyse.m in Sources */,
+				FCCA4DE61E35A7F1004E5DE5 /* AppDelegate+MitAnalyse.m in Sources */,
 				FC2F14241E26222E005FBEB6 /* ViewControllerTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC15B15B1E62775200F2314D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC2F14061E2621CE005FBEB6 /* MitAnalytic */;
+			targetProxy = FC15B15A1E62775200F2314D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FC2F14131E2621CE005FBEB6 /* Main.storyboard */ = {
@@ -277,6 +357,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FC15B15C1E62775200F2314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T43EX2XKU3;
+				INFOPLIST_FILE = MitAnalyticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mcking.MitAnalyticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MitAnalytic.app/MitAnalytic";
+			};
+			name = Debug;
+		};
+		FC15B15D1E62775200F2314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T43EX2XKU3;
+				INFOPLIST_FILE = MitAnalyticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mcking.MitAnalyticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MitAnalytic.app/MitAnalytic";
+			};
+			name = Release;
+		};
 		FC2F141C1E2621CE005FBEB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +500,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC15B15E1E62775200F2314D /* Build configuration list for PBXNativeTarget "MitAnalyticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC15B15C1E62775200F2314D /* Debug */,
+				FC15B15D1E62775200F2314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FC2F14021E2621CE005FBEB6 /* Build configuration list for PBXProject "MitAnalytic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

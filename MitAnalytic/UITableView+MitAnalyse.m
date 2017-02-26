@@ -6,15 +6,14 @@
 //  Copyright © 2017年 MENGCHEN. All rights reserved.
 //
 
-#import "UITableView+analyse.h"
+#import "UITableView+MitAnalyse.h"
 #import "NSObject+methodSwissing.h"
 #import <objc/runtime.h>
 #import "MitAnalyse.h"
-@implementation UITableView (analyse)
+@implementation UITableView (MitAnalyse)
 +(void)load{
     [NSObject swizzleMethod:[self class] origin:@selector(setDelegate:) new:@selector(analyse_setDelegate:)];
 }
-
 
 - (void)analyse_setDelegate:(id <UITableViewDelegate>)delegate{
     [self analyse_setDelegate:delegate];

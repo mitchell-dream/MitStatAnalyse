@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIResponder (analyse)
+@interface UIResponder (MitAnalyse)
 
 @end

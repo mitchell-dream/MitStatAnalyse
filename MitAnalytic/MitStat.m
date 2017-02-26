@@ -12,6 +12,8 @@
 
 
 #define MitStatManager [MitStat sharedManager]
+#define kMaxFileSize 5*1024*1024//默认最大文件阈值
+
 static NSString * const kMITFolderName = @"MITStat";//文件夹名称
 static NSString * const kMITFileName = @"MITStat.txt";//文件名称
 static NSString * const kMITFileZipName = @"MITStat.zip";//压缩包名称
@@ -200,7 +202,7 @@ static inline NSString * timeStamp(){
     [MitStatManager statWithAnalyseData:dict];
 }
 - (void)statWithAnalyseData:(NSDictionary *)dict{
-    NSLog(@"策略内打点:%@",dict);
+//    NSLog(@"策略内打点:%@",dict);
     __block NSString * detail = [NSString stringWithFormat:@"onceIdentifier=%@|userId=%@|timeStamp=%@|",self.onceIdentifier,self.userId,timeStamp()];
     NSInteger total = [dict allKeys].count;
     NSInteger num = 0;
@@ -215,12 +217,12 @@ static inline NSString * timeStamp(){
         }
     }
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    NSLog(@"统计详情 = %@",detail);
+//    NSLog(@"统计详情 = %@",detail);
     [MitStatManager writeData:detail];
     
 }
 +(void)statWithOtherData:(NSDictionary *)dict{
-    NSLog(@"策略外打点:%@",dict);
+//    NSLog(@"策略外打点:%@",dict);
 
     [MitStatManager statWithOtherData:dict];
     
@@ -371,13 +373,19 @@ static inline NSString * timeStamp(){
     dispatch_async(_queue, ^{
         NSString * content= [NSString stringWithFormat:@"%@",stringData];
         NSLog(@"打点数据  %@",content);
-        NSLog(@"线程 = %@",[NSThread currentThread]);
         //创建文件成功，写入文件
         NSFileHandle * fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[MitStat filePath]];
         [fileHandle seekToEndOfFile];
         NSData * stringDat  = [content dataUsingEncoding:NSUTF8StringEncoding];
         [fileHandle writeData:stringDat];
         [fileHandle closeFile];
+        //检查文件大小是否超过阈值，如果超过启动上传逻辑
+        NSError * err = nil;
+        NSFileManager* manager = [NSFileManager defaultManager];
+        unsigned long long size = [[manager attributesOfItemAtPath:[MitStat filePath] error:&err] fileSize];
+        if (size > kMaxFileSize) {
+            [MitStat upLoadFile];
+        }        
     });
 }
 #pragma mark - 文件: 读文件
@@ -419,6 +427,11 @@ static inline NSString * timeStamp(){
     
     //网络请求代码逻辑
     NSLog(@"开始上传文件");
+    
+    
+    
+    
+    //是否上传成功，上传成功删除文件
     BOOL uploadSucceed = false;
     if (uploadSucceed) {
         NSLog(@"上传打点文件成功");

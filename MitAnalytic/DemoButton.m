@@ -18,4 +18,23 @@
 }
 */
 
+-(instancetype)init{
+    if (self = [super init]) {
+        [self addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    return self;
+}
+
+
+-(void)vvv{
+    
+    [self btnClick];
+}
+
+- (void)btnClick{
+    
+    NSLog(@"aaaaaaaa");
+    
+}
 @end

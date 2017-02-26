@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate (analyse)
+@interface AppDelegate (MitAnalyse)
 
 
 

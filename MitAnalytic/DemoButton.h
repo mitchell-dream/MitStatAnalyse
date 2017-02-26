@@ -10,4 +10,7 @@
 
 @interface DemoButton : UIButton
 
+
+- (void)vvv;
+
 @end

@@ -1,13 +1,13 @@
 //
-//  UIControl+analyse.h
+//  UITableView+analyse.h
 //  MitAnalytic
 //
-//  Created by MENGCHEN on 2017/1/11.
+//  Created by MENGCHEN on 2017/1/12.
 //  Copyright © 2017年 MENGCHEN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIControl (analyse)
+@interface UITableView (MitAnalyse)
 
 @end

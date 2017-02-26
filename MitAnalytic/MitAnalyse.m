@@ -73,7 +73,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     NSString * clsName = NSStringFromClass(cls);
     NSString * targetName = NSStringFromClass([targes class]);
     NSString * methodName = NSStringFromSelector(selector);
-    NSLog(@"解析事件：class = %@ target = %@ sel = %@",clsName,targetName,methodName);
+//    NSLog(@"解析事件：class = %@ target = %@ sel = %@",clsName,targetName,methodName);
     NSString * key = [NSString stringWithFormat:@"%@_%@_%@",clsName,targetName,methodName];
     NSDictionary * dict = [MitAnalyse readDataFromKey:key];
     if (message&&dict) {
@@ -83,7 +83,6 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     }
     if (dict) {
         //缓存中有值，打对应的点
-        
         [MitStat statWithAnalyseData:dict];
     } else {
         NSDictionary * dic = @{@"class":clsName,@"target":targetName,@"sel":methodName};
@@ -111,8 +110,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
         NSLog(@"%@",error.description);
         return;
     }
-//    NSLog(@"dict = %@ key = %@",dict,key);
-    if (![[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         dispatch_async([MitAnalyseManager getFileQueue], ^{
             [[NSFileManager defaultManager]createFileAtPath:filePath contents:data attributes:nil];
         });
@@ -123,7 +121,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
 -(dispatch_queue_t) getFileQueue{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _fileQueue = dispatch_queue_create(0, DISPATCH_QUEUE_CONCURRENT);
+        _fileQueue = dispatch_queue_create(0, DISPATCH_QUEUE_SERIAL);
     });
     return _fileQueue;
 }
@@ -143,7 +141,7 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     if (!key) {
         return nil;
     }
-    //因为这里涉及到了内存的问题，如果统计需求过多，都存到内存中，会增大内存的压力，这时可以采用磁盘写入，但是磁盘的 I/O 操作
+    //因为这里涉及到了内存的问题，如果统计需求过多，都存到内存中，会增大内存的压力，这时可以采用磁盘写入
     __block NSDictionary * dict = nil;
     //读内存
     dict = [MitAnalyseManager.analyseCache objectForKey:key];
@@ -154,16 +152,18 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
     //读磁盘
     NSString * filePath = [MitAnalyse filePathForKey:key];
     if ([[NSFileManager defaultManager]fileExistsAtPath:filePath]) {
-        NSLog(@"从磁盘中读取");
-        NSData * fileData = [[NSFileManager defaultManager]contentsAtPath:filePath];
-        NSError* errr = nil;
-        dict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&errr];
-        if (errr) {
-            NSLog(@"%@",errr.description);
-        }
-        if (fileData) {
-            [MitAnalyseManager.analyseCache setObject:dict forKey:key];
-        }
+        dispatch_async([MitAnalyseManager getFileQueue], ^{
+            NSLog(@"从磁盘中读取");
+            NSData * fileData = [[NSFileManager defaultManager]contentsAtPath:filePath];
+            NSError* errr = nil;
+            dict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&errr];
+            if (errr) {
+                NSLog(@"%@",errr.description);
+            }
+            if (fileData) {
+                [MitAnalyseManager.analyseCache setObject:dict forKey:key];
+            }
+        });
     }
     return dict;
 }
@@ -211,7 +211,6 @@ static NSString * kJsonFileName =@"MitAnalyseFile";
         }];
         [cacheOp addDependency:handleOp];
         [MitAnalyseManager.queue addOperation:cacheOp];
-        
     } else {
         NSLog(@"数据类型错误%@",jsonObject);
     }
